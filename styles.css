@@ -1,0 +1,592 @@
+/* Reset e Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #ffffff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #1e40af 0%, #059669 100%);
+    color: white;
+    padding: 80px 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 24px;
+}
+
+.hero-title .highlight {
+    color: #fbbf24;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-bottom: 32px;
+    opacity: 0.9;
+}
+
+.price-highlight {
+    background: rgba(255,255,255,0.15);
+    padding: 16px 24px;
+    border-radius: 12px;
+    margin-bottom: 32px;
+    backdrop-filter: blur(10px);
+}
+
+.price-highlight .price {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 36px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.cta-button.primary {
+    background: linear-gradient(45deg, #f97316, #ea580c);
+    color: white;
+}
+
+.cta-button.primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(249, 115, 22, 0.4);
+}
+
+.cta-button.secondary {
+    background: linear-gradient(45deg, #059669, #047857);
+    color: white;
+}
+
+.cta-button.secondary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(5, 150, 105, 0.4);
+}
+
+.cta-button.final {
+    background: linear-gradient(45deg, #f97316, #ea580c);
+    color: white;
+    font-size: 1.3rem;
+    padding: 24px 48px;
+}
+
+.cta-button.final:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(249, 115, 22, 0.5);
+}
+
+.hero-image {
+    text-align: center;
+}
+
+.ebook-mockup {
+    max-width: 100%;
+    height: auto;
+    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.3));
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Apresentação Section */
+.apresentacao {
+    padding: 100px 0;
+    background: #f8fafc;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1e40af;
+    margin-bottom: 24px;
+}
+
+.section-header p {
+    font-size: 1.2rem;
+    color: #64748b;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.learning-grid h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #1e40af;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.learning-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.learning-item {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.learning-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+.learning-item .icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #1e40af, #059669);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px;
+}
+
+.learning-item .icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.learning-item h4 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #1e40af;
+    margin-bottom: 16px;
+}
+
+.learning-item p {
+    color: #64748b;
+    font-size: 1rem;
+}
+
+/* Benefícios Section */
+.beneficios {
+    padding: 100px 0;
+    background: white;
+}
+
+.beneficios h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1e40af;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
+    background: #f0f9ff;
+    border-radius: 15px;
+    border-left: 5px solid #059669;
+}
+
+.benefit-item i {
+    font-size: 2rem;
+    color: #059669;
+    flex-shrink: 0;
+}
+
+.benefit-item p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #1e40af;
+}
+
+/* Depoimentos Section */
+.depoimentos {
+    padding: 100px 0;
+    background: #f8fafc;
+}
+
+.depoimentos h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1e40af;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+.testimonial {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.testimonial::before {
+    content: '"';
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    font-size: 4rem;
+    color: #1e40af;
+    opacity: 0.3;
+}
+
+.stars {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.stars i {
+    color: #fbbf24;
+    font-size: 1.2rem;
+}
+
+.testimonial p {
+    font-size: 1.1rem;
+    color: #64748b;
+    margin-bottom: 24px;
+    font-style: italic;
+}
+
+.author strong {
+    color: #1e40af;
+    font-weight: 600;
+}
+
+.author span {
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+/* Oferta Especial Section */
+.oferta-especial {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #1e40af 0%, #059669 100%);
+    color: white;
+    text-align: center;
+}
+
+.offer-content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.offer-text {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+}
+
+.offer-text .price-highlight {
+    color: #fbbf24;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.urgency {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: rgba(255,255,255,0.15);
+    padding: 16px 24px;
+    border-radius: 12px;
+    margin: 30px auto;
+    max-width: 500px;
+    backdrop-filter: blur(10px);
+}
+
+.urgency i {
+    color: #fbbf24;
+    font-size: 1.2rem;
+}
+
+/* Garantia Section */
+.garantia {
+    padding: 80px 0;
+    background: #f0f9ff;
+}
+
+.guarantee-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.guarantee-icon {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, #059669, #047857);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.guarantee-icon i {
+    font-size: 2.5rem;
+    color: white;
+}
+
+.guarantee-text h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1e40af;
+    margin-bottom: 16px;
+}
+
+.guarantee-text p {
+    font-size: 1.2rem;
+    color: #64748b;
+}
+
+/* CTA Final Section */
+.cta-final {
+    padding: 120px 0;
+    background: linear-gradient(135deg, #1e40af 0%, #059669 100%);
+    color: white;
+    text-align: center;
+}
+
+.final-cta-content h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 24px;
+}
+
+.final-cta-content p {
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.final-price {
+    margin: 40px 0;
+}
+
+.price-label {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    opacity: 0.8;
+}
+
+.final-price-value {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #fbbf24;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.security-badges {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.badge {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255,255,255,0.15);
+    padding: 16px 24px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+}
+
+.badge i {
+    color: #fbbf24;
+    font-size: 1.2rem;
+}
+
+.badge span {
+    font-weight: 500;
+}
+
+/* Footer */
+.footer {
+    background: #1e293b;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer p {
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .section-header h2 {
+        font-size: 2rem;
+    }
+    
+    .learning-items {
+        grid-template-columns: 1fr;
+    }
+    
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .guarantee-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .final-cta-content h2 {
+        font-size: 2.2rem;
+    }
+    
+    .final-price-value {
+        font-size: 2.5rem;
+    }
+    
+    .security-badges {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cta-button {
+        padding: 16px 32px;
+        font-size: 1rem;
+    }
+    
+    .cta-button.final {
+        padding: 20px 40px;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .hero {
+        padding: 60px 0;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .learning-item {
+        padding: 30px 20px;
+    }
+    
+    .testimonial {
+        padding: 30px 20px;
+    }
+    
+    .final-cta-content h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Loading Animation */
+.loading {
+    opacity: 0;
+    animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
