@@ -1,178 +1,716 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O Caminho para o Sucesso Online - eBook</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
-    <!-- HERO SECTION -->
-    <header class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Você vai continuar trabalhando o mês inteiro… e não ver dinheiro sobrando?</h1>
-                <p class="subtitle">Eu também já trabalhei o mês inteiro e não sobrava nada. Foi aí que comecei a buscar uma forma de ganhar dinheiro pela internet, usando apenas o celular.</p>
-            </div>
-            <div class="hero-image">
-                <img src="ebook-mockup.png" alt="Mockup do eBook O Caminho para o Sucesso Online">
-            </div>
-        </div>
-    </header>
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <!-- PAIN POINTS SECTION -->
-    <section class="pain-points">
-        <div class="container">
-            <h2>Você se identifica com isso?</h2>
-            <ul>
-                <li>Trabalha o dia todo e o dinheiro nunca sobra no final do mês?</li>
-                <li>Sente-se preso(a) à dependência de um único salário?</li>
-                <li>Vê outras pessoas ganhando dinheiro online e pensa: "Por que eu não consigo?"</li>
-                <li>Quer começar no digital, mas não sabe por onde, se sente perdido(a) com tanta informação?</li>
-            </ul>
-        </div>
-    </section>
+html {
+    scroll-behavior: smooth;
+}
 
-    <!-- CONNECTION SECTION -->
-    <section class="connection">
-        <div class="container">
-            <h2>Eu também já estive aí...</h2>
-            <p>Eu sei exatamente como é essa sensação. Também já me senti perdido(a), sem saber como dar o primeiro passo para ganhar dinheiro online. A ideia de ter uma renda extra e mais liberdade parecia um sonho distante, algo só para quem já entendia de tecnologia ou tinha muito tempo livre.</p>
-            <p>Mas eu descobri que não precisa ser assim. Existe um método simples, direto ao ponto, que qualquer pessoa pode aplicar, mesmo trabalhando o dia inteiro e usando apenas o celular. Um caminho claro para você começar a ter resultados reais.</p>
-        </div>
-    </section>
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f7f6;
+    overflow-x: hidden;
+}
 
-    <!-- PRODUCT PRESENTATION SECTION -->
-    <section class="product-presentation">
-        <div class="container">
-            <h2>Apresentando: O Caminho para o Sucesso Online</h2>
-            <p>Este eBook foi criado pensando em você que quer começar do zero. Esqueça as promessas mirabolantes e as estratégias complicadas. Aqui você encontra um guia:</p>
-            <ul>
-                <li><strong>Direto ao ponto:</strong> Sem enrolação, só o que funciona.</li>
-                <li><strong>Simples de aplicar:</strong> Linguagem fácil e passos práticos.</li>
-                <li><strong>Para iniciantes:</strong> Não precisa ter conhecimento prévio.</li>
-                <li><strong>Sem promessas irreais:</strong> Foco em resultados consistentes e alcançáveis.</li>
-            </ul>
-        </div>
-    </section>
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
-    <!-- BENEFITS SECTION -->
-    <section class="benefits">
-        <div class="container">
-            <h2>Benefícios que você vai conquistar:</h2>
-            <ul>
-                <li><i class="fas fa-check-circle"></i> Renda extra para realizar seus sonhos.</li>
-                <li><i class="fas fa-check-circle"></i> Mais liberdade para você e sua família.</li>
-                <li><i class="fas fa-check-circle"></i> Menos dependência de um único salário.</li>
-                <li><i class="fas fa-check-circle"></i> Conhecimento prático para sua independência financeira.</li>
-            </ul>
-        </div>
-    </section>
+/* Cores */
+:root {
+    --primary-color: #2196F3;
+    --secondary-color: #4CAF50;
+    --accent-color: #FF9800;
+    --white-color: #ffffff;
+    --dark-color: #333333;
+    --light-gray: #f0f0f0;
+    --text-gray: #555555;
+}
 
-    <!-- WHAT YOU WILL LEARN SECTION -->
-    <section class="what-you-will-learn">
-        <div class="container">
-            <h2>O que você vai aprender neste eBook:</h2>
-            <div class="learning-grid">
-                <div class="learning-item">
-                    <i class="fas fa-lightbulb"></i>
-                    <h3>Primeiros Passos no Digital</h3>
-                    <p>Como iniciar sua jornada online de forma simples e eficaz.</p>
-                </div>
-                <div class="learning-item">
-                    <i class="fas fa-mobile-alt"></i>
-                    <h3>Ganhe Dinheiro Pelo Celular</h3>
-                    <p>Estratégias para transformar seu smartphone em uma máquina de vendas.</p>
-                </div>
-                <div class="learning-item">
-                    <i class="fas fa-seedling"></i>
-                    <h3>Começando do Zero</h3>
-                    <p>Um guia completo para quem não tem experiência em marketing digital.</p>
-                </div>
-                <div class="learning-item">
-                    <i class="fas fa-dollar-sign"></i>
-                    <h3>Renda Extra Descomplicada</h3>
-                    <p>Métodos práticos para gerar uma renda adicional sem complicação.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+/* ===== HERO SECTION ===== */
+.hero {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: var(--white-color);
+    padding: 40px 0;
+    text-align: center;
+    position: static;
+    z-index: 1;
+}
 
-    <!-- OBJECTION HANDLING SECTION -->
-    <section class="objection-handling">
-        <div class="container">
-            <h2>Dúvidas Comuns (e Respostas Sinceras):</h2>
-            <div class="faq-item">
-                <h3>"Isso realmente funciona para mim?"</h3>
-                <p>Sim! As estratégias são testadas e adaptadas para quem está começando, com foco em resultados reais e alcançáveis, mesmo com pouco tempo.</p>
-            </div>
-            <div class="faq-item">
-                <h3>"É muito difícil de aplicar?"</h3>
-                <p>Não! A linguagem é simples e os passos são práticos. Você não precisa ser um expert em tecnologia para começar a ter resultados.</p>
-            </div>
-            <div class="faq-item">
-                <h3>"Preciso investir muito dinheiro?"</h3>
-                <p>Não! O eBook foca em estratégias que você pode aplicar usando apenas seu celular e ferramentas gratuitas ou de baixo custo. Seu investimento inicial é apenas no conhecimento.</p>
-            </div>
-        </div>
-    </section>
+.hero .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
 
-    <!-- PROOF SECTION -->
-    <section class="proof">
-        <div class="container">
-            <h2>A Lógica por Trás do Sucesso:</h2>
-            <p>Milhões de pessoas estão conectadas à internet todos os dias, buscando produtos, serviços e informações. Com as estratégias certas, é possível alcançar essas pessoas e transformar a atenção delas em vendas. Este eBook te mostra o caminho para:</p>
-            <ul>
-                <li>Identificar oportunidades no mercado digital.</li>
-                <li>Criar ofertas irresistíveis.</li>
-                <li>Atrair clientes de forma orgânica e eficiente.</li>
-                <li>Converter vendas usando seu celular.</li>
-            </ul>
-            <p><strong>Não é mágica, é método. E este método está ao seu alcance.</strong></p>
-        </div>
-    </section>
+.hero-content {
+    max-width: 600px;
+    text-align: center;
+}
 
-    <!-- OFFER SECTION (COM PREÇO) -->
-    <section class="offer">
-        <div class="container">
-            <h2>Sua Oportunidade de Transformação:</h2>
-            <p>Imagine ter acesso a todo esse conhecimento, que poderia custar centenas de reais em cursos e mentorias, por um valor que cabe no seu bolso.</p>
-            <div class="price-box">
-                <p class="price-highlight">Hoje, você pode garantir seu acesso imediato ao eBook "O Caminho para o Sucesso Online" por apenas:</p>
-                <p class="price">R$ 37,00</p>
-                <p class="low-risk">Um investimento baixo para um potencial de retorno ilimitado. Risco zero para você!</p>
-                <p class="urgency">Esta oferta especial é por tempo limitado. O preço pode mudar a qualquer momento. Não perca essa chance!</p>
-            </div>
-            <a href="https://pay.hotmart.com/X89951504X" class="cta-button cta-button-large">Quero começar a ganhar pelo celular</a>
-        </div>
-    </section>
+.hero h1 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    line-height: 1.3;
+    font-weight: 700;
+}
 
-    <!-- GUARANTEE SECTION -->
-    <section class="guarantee">
-        <div class="container">
-            <h2>Sua Satisfação é 100% Garantida!</h2>
-            <p>Temos tanta certeza de que este eBook vai transformar seus resultados que oferecemos uma garantia incondicional:</p>
-            <p class="guarantee-text">Se em até 7 dias você não estiver satisfeito(a) com o conteúdo, ou sentir que não é para você, basta nos enviar um e-mail e devolveremos 100% do seu investimento. Sem perguntas, sem burocracia. <strong>Risco Zero para você!</strong></p>
-        </div>
-    </section>
+.hero .subtitle {
+    font-size: 1.1em;
+    margin-bottom: 25px;
+    opacity: 0.95;
+    line-height: 1.5;
+}
 
-    <!-- FINAL CTA SECTION -->
-    <section class="final-cta">
-        <div class="container">
-            <h2>Não deixe para depois o sucesso que você pode começar hoje!</h2>
-            <a href="https://pay.hotmart.com/X89951504X" class="cta-button cta-button-large">Quero começar a ganhar pelo celular</a>
-        </div>
-    </section>
+.hero-image {
+    width: 100%;
+    max-width: 350px;
+    margin-top: 20px;
+}
 
-    <!-- FOOTER -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 O Caminho para o Sucesso Online. Todos os direitos reservados.</p>
-        </div>
-    </footer>
+.hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+}
 
-    <script src="script.js"></script>
-</body>
-</html>
+/* ===== CTA BUTTONS ===== */
+.cta-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--white-color);
+    padding: 14px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 15px rgba(255, 152, 0, 0.3);
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.cta-button:hover {
+    background-color: #e68a00;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 152, 0, 0.4);
+}
+
+.cta-button-large {
+    padding: 16px 35px;
+    font-size: 1.1em;
+    display: block;
+    margin: 25px auto 0;
+    max-width: 400px;
+}
+
+/* ===== GENERAL SECTION STYLING ===== */
+section {
+    padding: 50px 0;
+    text-align: center;
+    position: static;
+}
+
+section:nth-of-type(even) {
+    background-color: var(--light-gray);
+}
+
+h2 {
+    font-size: 1.9em;
+    color: var(--dark-color);
+    margin-bottom: 30px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--secondary-color);
+    border-radius: 2px;
+    margin: 15px auto 0;
+}
+
+/* ===== PAIN POINTS SECTION ===== */
+.pain-points ul {
+    list-style: none;
+    max-width: 650px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.pain-points li {
+    background-color: var(--white-color);
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+    font-size: 1.05em;
+    color: var(--text-gray);
+    border-left: 5px solid var(--accent-color);
+    transition: transform 0.2s ease;
+}
+
+.pain-points li:hover {
+    transform: translateX(5px);
+}
+
+/* ===== CONNECTION SECTION ===== */
+.connection {
+    background-color: var(--white-color);
+}
+
+.connection p {
+    max-width: 700px;
+    margin: 0 auto 20px auto;
+    font-size: 1.05em;
+    color: var(--text-gray);
+    line-height: 1.7;
+}
+
+/* ===== PRODUCT PRESENTATION SECTION ===== */
+.product-presentation p {
+    max-width: 700px;
+    margin: 0 auto 25px auto;
+    font-size: 1.05em;
+    color: var(--text-gray);
+}
+
+.product-presentation ul {
+    list-style: none;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.product-presentation li {
+    background-color: var(--white-color);
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    border-left: 5px solid var(--primary-color);
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+    font-size: 1.05em;
+    color: var(--text-gray);
+}
+
+.product-presentation li strong {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+/* ===== BENEFITS SECTION ===== */
+.benefits ul {
+    list-style: none;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.benefits li {
+    background-color: var(--white-color);
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    border-left: 5px solid var(--secondary-color);
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+    font-size: 1.05em;
+    color: var(--text-gray);
+    display: flex;
+    align-items: center;
+}
+
+.benefits li i {
+    color: var(--secondary-color);
+    margin-right: 12px;
+    font-size: 1.3em;
+    flex-shrink: 0;
+}
+
+/* ===== WHAT YOU WILL LEARN SECTION ===== */
+.what-you-will-learn {
+    background-color: var(--white-color);
+}
+
+.learning-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.learning-item {
+    background-color: var(--light-gray);
+    padding: 30px 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.learning-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.learning-item i {
+    font-size: 2.8em;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.learning-item h3 {
+    font-size: 1.2em;
+    color: var(--dark-color);
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.learning-item p {
+    font-size: 0.95em;
+    color: var(--text-gray);
+    line-height: 1.5;
+}
+
+/* ===== OBJECTION HANDLING SECTION ===== */
+.objection-handling {
+    background-color: var(--light-gray);
+}
+
+.objection-handling .faq-item {
+    background-color: var(--white-color);
+    padding: 28px 25px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.objection-handling .faq-item h3 {
+    color: var(--primary-color);
+    font-size: 1.2em;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.objection-handling .faq-item p {
+    color: var(--text-gray);
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+/* ===== PROOF SECTION ===== */
+.proof {
+    background-color: var(--white-color);
+}
+
+.proof p {
+    max-width: 700px;
+    margin: 0 auto 20px auto;
+    font-size: 1.05em;
+    color: var(--text-gray);
+    line-height: 1.7;
+}
+
+.proof ul {
+    list-style: none;
+    max-width: 700px;
+    margin: 20px auto 0;
+    text-align: left;
+    padding-left: 0;
+}
+
+.proof li {
+    margin-bottom: 12px;
+    font-size: 1.05em;
+    color: var(--text-gray);
+    padding-left: 25px;
+    position: relative;
+    line-height: 1.6;
+}
+
+.proof li::before {
+    content: '✓';
+    color: var(--secondary-color);
+    font-weight: bold;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    font-size: 1.2em;
+}
+
+/* ===== OFFER SECTION (COM PREÇO) ===== */
+.offer {
+    background: linear-gradient(135deg, var(--secondary-color) 0%, #388E3C 100%);
+    color: var(--white-color);
+    padding: 60px 0;
+}
+
+.offer h2 {
+    color: var(--white-color);
+}
+
+.offer p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.price-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px 25px;
+    border-radius: 12px;
+    margin: 30px auto;
+    max-width: 600px;
+    backdrop-filter: blur(10px);
+}
+
+.offer .price-highlight {
+    font-size: 1.3em;
+    font-weight: 700;
+    color: var(--white-color);
+    margin-bottom: 15px;
+}
+
+.offer .price {
+    font-size: 3.2em;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin: 15px 0;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.offer .low-risk {
+    font-size: 1.05em;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.offer .urgency {
+    font-size: 1em;
+    margin-bottom: 0;
+    opacity: 0.95;
+    font-style: italic;
+}
+
+/* ===== GUARANTEE SECTION ===== */
+.guarantee {
+    background-color: var(--white-color);
+    padding: 60px 0;
+}
+
+.guarantee .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 700px;
+}
+
+.guarantee h2 {
+    margin-bottom: 20px;
+}
+
+.guarantee p {
+    font-size: 1.05em;
+    color: var(--text-gray);
+    line-height: 1.7;
+}
+
+.guarantee-text {
+    font-size: 1.05em;
+    color: var(--text-gray);
+    line-height: 1.7;
+    background-color: var(--light-gray);
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 5px solid var(--secondary-color);
+}
+
+.guarantee-text strong {
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+
+/* ===== FINAL CTA SECTION ===== */
+.final-cta {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 60px 0;
+}
+
+.final-cta h2 {
+    color: var(--white-color);
+    font-size: 2.2em;
+    margin-bottom: 30px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: var(--dark-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: 25px 0;
+    font-size: 0.95em;
+}
+
+/* ===== MOBILE ADJUSTMENTS (MAX-WIDTH: 768PX) ===== */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    /* Hero Mobile */
+    .hero {
+        padding: 30px 0;
+    }
+
+    .hero h1 {
+        font-size: 1.7em;
+        margin-bottom: 15px;
+    }
+
+    .hero .subtitle {
+        font-size: 1em;
+        margin-bottom: 20px;
+    }
+
+    .hero-image {
+        max-width: 280px;
+    }
+
+    /* General Mobile */
+    section {
+        padding: 40px 0;
+    }
+
+    h2 {
+        font-size: 1.6em;
+        margin-bottom: 25px;
+    }
+
+    h2::after {
+        margin-top: 12px;
+    }
+
+    /* Buttons Mobile */
+    .cta-button {
+        padding: 12px 24px;
+        font-size: 0.95em;
+    }
+
+    .cta-button-large {
+        padding: 14px 28px;
+        font-size: 1em;
+        margin: 20px auto 0;
+    }
+
+    /* Pain Points Mobile */
+    .pain-points li {
+        padding: 15px 18px;
+        margin-bottom: 10px;
+        font-size: 1em;
+    }
+
+    /* Product Presentation Mobile */
+    .product-presentation p {
+        font-size: 1em;
+        margin-bottom: 20px;
+    }
+
+    .product-presentation li {
+        padding: 15px 18px;
+        margin-bottom: 10px;
+        font-size: 1em;
+    }
+
+    /* Benefits Mobile */
+    .benefits li {
+        padding: 15px 18px;
+        margin-bottom: 10px;
+        font-size: 1em;
+    }
+
+    .benefits li i {
+        font-size: 1.2em;
+        margin-right: 10px;
+    }
+
+    /* Learning Grid Mobile */
+    .learning-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .learning-item {
+        padding: 25px 20px;
+    }
+
+    .learning-item i {
+        font-size: 2.4em;
+    }
+
+    .learning-item h3 {
+        font-size: 1.1em;
+    }
+
+    .learning-item p {
+        font-size: 0.9em;
+    }
+
+    /* FAQ Mobile */
+    .objection-handling .faq-item {
+        padding: 22px 20px;
+        margin-bottom: 15px;
+    }
+
+    .objection-handling .faq-item h3 {
+        font-size: 1.1em;
+        margin-bottom: 10px;
+    }
+
+    .objection-handling .faq-item p {
+        font-size: 0.95em;
+    }
+
+    /* Proof Mobile */
+    .proof p {
+        font-size: 1em;
+    }
+
+    .proof li {
+        font-size: 1em;
+        padding-left: 25px;
+    }
+
+    /* Offer Mobile */
+    .offer {
+        padding: 50px 0;
+    }
+
+    .offer p {
+        font-size: 1em;
+    }
+
+    .price-box {
+        padding: 25px 20px;
+        margin: 25px auto;
+    }
+
+    .offer .price-highlight {
+        font-size: 1.15em;
+    }
+
+    .offer .price {
+        font-size: 2.5em;
+        margin: 12px 0;
+    }
+
+    .offer .low-risk {
+        font-size: 1em;
+    }
+
+    .offer .urgency {
+        font-size: 0.95em;
+    }
+
+    /* Guarantee Mobile */
+    .guarantee {
+        padding: 50px 0;
+    }
+
+    .guarantee p {
+        font-size: 1em;
+    }
+
+    .guarantee-text {
+        font-size: 1em;
+        padding: 20px;
+    }
+
+    /* Final CTA Mobile */
+    .final-cta {
+        padding: 50px 0;
+    }
+
+    .final-cta h2 {
+        font-size: 1.7em;
+        margin-bottom: 25px;
+    }
+
+    /* Footer Mobile */
+    footer {
+        padding: 20px 0;
+        font-size: 0.9em;
+    }
+}
+
+/* ===== MOBILE ADJUSTMENTS (MAX-WIDTH: 480PX) ===== */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 12px;
+    }
+
+    /* Hero Extra Mobile */
+    .hero h1 {
+        font-size: 1.5em;
+    }
+
+    .hero .subtitle {
+        font-size: 0.95em;
+    }
+
+    .hero-image {
+        max-width: 240px;
+    }
+
+    /* Headings Extra Mobile */
+    h2 {
+        font-size: 1.4em;
+        margin-bottom: 20px;
+    }
+
+    /* Buttons Extra Mobile */
+    .cta-button-large {
+        padding: 12px 20px;
+        font-size: 0.9em;
+    }
+
+    /* Learning Grid Extra Mobile */
+    .learning-item {
+        padding: 20px 15px;
+    }
+
+    .learning-item i {
+        font-size: 2.2em;
+    }
+
+    /* Price Extra Mobile */
+    .offer .price {
+        font-size: 2.2em;
+    }
+
+    /* Final CTA Extra Mobile */
+    .final-cta h2 {
+        font-size: 1.5em;
+    }
+}
