@@ -1,592 +1,178 @@
-/* Reset e Base */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Inter', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #ffffff;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Hero Section */
-.hero {
-    background: linear-gradient(135deg, #1e40af 0%, #059669 100%);
-    color: white;
-    padding: 80px 0;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-}
-
-.hero-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
-}
-
-.hero-title {
-    font-size: 3.5rem;
-    font-weight: 800;
-    line-height: 1.1;
-    margin-bottom: 24px;
-}
-
-.hero-title .highlight {
-    color: #fbbf24;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-}
-
-.hero-subtitle {
-    font-size: 1.25rem;
-    font-weight: 400;
-    margin-bottom: 32px;
-    opacity: 0.9;
-}
-
-.price-highlight {
-    background: rgba(255,255,255,0.15);
-    padding: 16px 24px;
-    border-radius: 12px;
-    margin-bottom: 32px;
-    backdrop-filter: blur(10px);
-}
-
-.price-highlight .price {
-    font-size: 1.5rem;
-    font-weight: 600;
-}
-
-.cta-button {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    padding: 18px 36px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    text-decoration: none;
-    border-radius: 50px;
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-}
-
-.cta-button.primary {
-    background: linear-gradient(45deg, #f97316, #ea580c);
-    color: white;
-}
-
-.cta-button.primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 35px rgba(249, 115, 22, 0.4);
-}
-
-.cta-button.secondary {
-    background: linear-gradient(45deg, #059669, #047857);
-    color: white;
-}
-
-.cta-button.secondary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 35px rgba(5, 150, 105, 0.4);
-}
-
-.cta-button.final {
-    background: linear-gradient(45deg, #f97316, #ea580c);
-    color: white;
-    font-size: 1.3rem;
-    padding: 24px 48px;
-}
-
-.cta-button.final:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 40px rgba(249, 115, 22, 0.5);
-}
-
-.hero-image {
-    text-align: center;
-}
-
-.ebook-mockup {
-    max-width: 100%;
-    height: auto;
-    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.3));
-    animation: float 6s ease-in-out infinite;
-}
-
-@keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
-}
-
-/* Apresentação Section */
-.apresentacao {
-    padding: 100px 0;
-    background: #f8fafc;
-}
-
-.section-header {
-    text-align: center;
-    margin-bottom: 80px;
-}
-
-.section-header h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #1e40af;
-    margin-bottom: 24px;
-}
-
-.section-header p {
-    font-size: 1.2rem;
-    color: #64748b;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.learning-grid h3 {
-    font-size: 2rem;
-    font-weight: 600;
-    color: #1e40af;
-    text-align: center;
-    margin-bottom: 60px;
-}
-
-.learning-items {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
-}
-
-.learning-item {
-    background: white;
-    padding: 40px 30px;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.learning-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
-}
-
-.learning-item .icon {
-    width: 80px;
-    height: 80px;
-    background: linear-gradient(135deg, #1e40af, #059669);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 24px;
-}
-
-.learning-item .icon i {
-    font-size: 2rem;
-    color: white;
-}
-
-.learning-item h4 {
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: #1e40af;
-    margin-bottom: 16px;
-}
-
-.learning-item p {
-    color: #64748b;
-    font-size: 1rem;
-}
-
-/* Benefícios Section */
-.beneficios {
-    padding: 100px 0;
-    background: white;
-}
-
-.beneficios h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #1e40af;
-    text-align: center;
-    margin-bottom: 60px;
-}
-
-.benefits-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-}
-
-.benefit-item {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    padding: 30px;
-    background: #f0f9ff;
-    border-radius: 15px;
-    border-left: 5px solid #059669;
-}
-
-.benefit-item i {
-    font-size: 2rem;
-    color: #059669;
-    flex-shrink: 0;
-}
-
-.benefit-item p {
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: #1e40af;
-}
-
-/* Depoimentos Section */
-.depoimentos {
-    padding: 100px 0;
-    background: #f8fafc;
-}
-
-.depoimentos h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #1e40af;
-    text-align: center;
-    margin-bottom: 60px;
-}
-
-.testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 40px;
-}
-
-.testimonial {
-    background: white;
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    position: relative;
-}
-
-.testimonial::before {
-    content: '"';
-    position: absolute;
-    top: -10px;
-    left: 20px;
-    font-size: 4rem;
-    color: #1e40af;
-    opacity: 0.3;
-}
-
-.stars {
-    display: flex;
-    gap: 5px;
-    margin-bottom: 20px;
-}
-
-.stars i {
-    color: #fbbf24;
-    font-size: 1.2rem;
-}
-
-.testimonial p {
-    font-size: 1.1rem;
-    color: #64748b;
-    margin-bottom: 24px;
-    font-style: italic;
-}
-
-.author strong {
-    color: #1e40af;
-    font-weight: 600;
-}
-
-.author span {
-    color: #64748b;
-    font-size: 0.9rem;
-}
-
-/* Oferta Especial Section */
-.oferta-especial {
-    padding: 100px 0;
-    background: linear-gradient(135deg, #1e40af 0%, #059669 100%);
-    color: white;
-    text-align: center;
-}
-
-.offer-content h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 30px;
-}
-
-.offer-text {
-    font-size: 1.3rem;
-    margin-bottom: 30px;
-}
-
-.offer-text .price-highlight {
-    color: #fbbf24;
-    font-weight: 700;
-    font-size: 1.5rem;
-}
-
-.urgency {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    background: rgba(255,255,255,0.15);
-    padding: 16px 24px;
-    border-radius: 12px;
-    margin: 30px auto;
-    max-width: 500px;
-    backdrop-filter: blur(10px);
-}
-
-.urgency i {
-    color: #fbbf24;
-    font-size: 1.2rem;
-}
-
-/* Garantia Section */
-.garantia {
-    padding: 80px 0;
-    background: #f0f9ff;
-}
-
-.guarantee-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.guarantee-icon {
-    width: 100px;
-    height: 100px;
-    background: linear-gradient(135deg, #059669, #047857);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-}
-
-.guarantee-icon i {
-    font-size: 2.5rem;
-    color: white;
-}
-
-.guarantee-text h3 {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #1e40af;
-    margin-bottom: 16px;
-}
-
-.guarantee-text p {
-    font-size: 1.2rem;
-    color: #64748b;
-}
-
-/* CTA Final Section */
-.cta-final {
-    padding: 120px 0;
-    background: linear-gradient(135deg, #1e40af 0%, #059669 100%);
-    color: white;
-    text-align: center;
-}
-
-.final-cta-content h2 {
-    font-size: 3rem;
-    font-weight: 800;
-    margin-bottom: 24px;
-}
-
-.final-cta-content p {
-    font-size: 1.3rem;
-    margin-bottom: 40px;
-    opacity: 0.9;
-}
-
-.final-price {
-    margin: 40px 0;
-}
-
-.price-label {
-    display: block;
-    font-size: 1.2rem;
-    margin-bottom: 8px;
-    opacity: 0.8;
-}
-
-.final-price-value {
-    font-size: 3.5rem;
-    font-weight: 800;
-    color: #fbbf24;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-}
-
-.security-badges {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 50px;
-    flex-wrap: wrap;
-}
-
-.badge {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    background: rgba(255,255,255,0.15);
-    padding: 16px 24px;
-    border-radius: 12px;
-    backdrop-filter: blur(10px);
-}
-
-.badge i {
-    color: #fbbf24;
-    font-size: 1.2rem;
-}
-
-.badge span {
-    font-weight: 500;
-}
-
-/* Footer */
-.footer {
-    background: #1e293b;
-    color: white;
-    padding: 40px 0;
-    text-align: center;
-}
-
-.footer p {
-    opacity: 0.8;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .hero-content {
-        grid-template-columns: 1fr;
-        gap: 40px;
-        text-align: center;
-    }
-    
-    .hero-title {
-        font-size: 2.5rem;
-    }
-    
-    .hero-subtitle {
-        font-size: 1.1rem;
-    }
-    
-    .section-header h2 {
-        font-size: 2rem;
-    }
-    
-    .learning-items {
-        grid-template-columns: 1fr;
-    }
-    
-    .benefits-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .testimonials-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .guarantee-content {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .final-cta-content h2 {
-        font-size: 2.2rem;
-    }
-    
-    .final-price-value {
-        font-size: 2.5rem;
-    }
-    
-    .security-badges {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .cta-button {
-        padding: 16px 32px;
-        font-size: 1rem;
-    }
-    
-    .cta-button.final {
-        padding: 20px 40px;
-        font-size: 1.1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .container {
-        padding: 0 15px;
-    }
-    
-    .hero {
-        padding: 60px 0;
-    }
-    
-    .hero-title {
-        font-size: 2rem;
-    }
-    
-    .section-header h2 {
-        font-size: 1.8rem;
-    }
-    
-    .learning-item {
-        padding: 30px 20px;
-    }
-    
-    .testimonial {
-        padding: 30px 20px;
-    }
-    
-    .final-cta-content h2 {
-        font-size: 1.8rem;
-    }
-}
-
-/* Smooth Scrolling */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Loading Animation */
-.loading {
-    opacity: 0;
-    animation: fadeIn 0.8s ease-in-out forwards;
-}
-
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-    }
-}
-
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Caminho para o Sucesso Online - eBook</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- HERO SECTION -->
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Você vai continuar trabalhando o mês inteiro… e não ver dinheiro sobrando?</h1>
+                <p class="subtitle">Eu também já trabalhei o mês inteiro e não sobrava nada. Foi aí que comecei a buscar uma forma de ganhar dinheiro pela internet, usando apenas o celular.</p>
+            </div>
+            <div class="hero-image">
+                <img src="ebook-mockup.png" alt="Mockup do eBook O Caminho para o Sucesso Online">
+            </div>
+        </div>
+    </header>
+
+    <!-- PAIN POINTS SECTION -->
+    <section class="pain-points">
+        <div class="container">
+            <h2>Você se identifica com isso?</h2>
+            <ul>
+                <li>Trabalha o dia todo e o dinheiro nunca sobra no final do mês?</li>
+                <li>Sente-se preso(a) à dependência de um único salário?</li>
+                <li>Vê outras pessoas ganhando dinheiro online e pensa: "Por que eu não consigo?"</li>
+                <li>Quer começar no digital, mas não sabe por onde, se sente perdido(a) com tanta informação?</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- CONNECTION SECTION -->
+    <section class="connection">
+        <div class="container">
+            <h2>Eu também já estive aí...</h2>
+            <p>Eu sei exatamente como é essa sensação. Também já me senti perdido(a), sem saber como dar o primeiro passo para ganhar dinheiro online. A ideia de ter uma renda extra e mais liberdade parecia um sonho distante, algo só para quem já entendia de tecnologia ou tinha muito tempo livre.</p>
+            <p>Mas eu descobri que não precisa ser assim. Existe um método simples, direto ao ponto, que qualquer pessoa pode aplicar, mesmo trabalhando o dia inteiro e usando apenas o celular. Um caminho claro para você começar a ter resultados reais.</p>
+        </div>
+    </section>
+
+    <!-- PRODUCT PRESENTATION SECTION -->
+    <section class="product-presentation">
+        <div class="container">
+            <h2>Apresentando: O Caminho para o Sucesso Online</h2>
+            <p>Este eBook foi criado pensando em você que quer começar do zero. Esqueça as promessas mirabolantes e as estratégias complicadas. Aqui você encontra um guia:</p>
+            <ul>
+                <li><strong>Direto ao ponto:</strong> Sem enrolação, só o que funciona.</li>
+                <li><strong>Simples de aplicar:</strong> Linguagem fácil e passos práticos.</li>
+                <li><strong>Para iniciantes:</strong> Não precisa ter conhecimento prévio.</li>
+                <li><strong>Sem promessas irreais:</strong> Foco em resultados consistentes e alcançáveis.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- BENEFITS SECTION -->
+    <section class="benefits">
+        <div class="container">
+            <h2>Benefícios que você vai conquistar:</h2>
+            <ul>
+                <li><i class="fas fa-check-circle"></i> Renda extra para realizar seus sonhos.</li>
+                <li><i class="fas fa-check-circle"></i> Mais liberdade para você e sua família.</li>
+                <li><i class="fas fa-check-circle"></i> Menos dependência de um único salário.</li>
+                <li><i class="fas fa-check-circle"></i> Conhecimento prático para sua independência financeira.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- WHAT YOU WILL LEARN SECTION -->
+    <section class="what-you-will-learn">
+        <div class="container">
+            <h2>O que você vai aprender neste eBook:</h2>
+            <div class="learning-grid">
+                <div class="learning-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Primeiros Passos no Digital</h3>
+                    <p>Como iniciar sua jornada online de forma simples e eficaz.</p>
+                </div>
+                <div class="learning-item">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Ganhe Dinheiro Pelo Celular</h3>
+                    <p>Estratégias para transformar seu smartphone em uma máquina de vendas.</p>
+                </div>
+                <div class="learning-item">
+                    <i class="fas fa-seedling"></i>
+                    <h3>Começando do Zero</h3>
+                    <p>Um guia completo para quem não tem experiência em marketing digital.</p>
+                </div>
+                <div class="learning-item">
+                    <i class="fas fa-dollar-sign"></i>
+                    <h3>Renda Extra Descomplicada</h3>
+                    <p>Métodos práticos para gerar uma renda adicional sem complicação.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OBJECTION HANDLING SECTION -->
+    <section class="objection-handling">
+        <div class="container">
+            <h2>Dúvidas Comuns (e Respostas Sinceras):</h2>
+            <div class="faq-item">
+                <h3>"Isso realmente funciona para mim?"</h3>
+                <p>Sim! As estratégias são testadas e adaptadas para quem está começando, com foco em resultados reais e alcançáveis, mesmo com pouco tempo.</p>
+            </div>
+            <div class="faq-item">
+                <h3>"É muito difícil de aplicar?"</h3>
+                <p>Não! A linguagem é simples e os passos são práticos. Você não precisa ser um expert em tecnologia para começar a ter resultados.</p>
+            </div>
+            <div class="faq-item">
+                <h3>"Preciso investir muito dinheiro?"</h3>
+                <p>Não! O eBook foca em estratégias que você pode aplicar usando apenas seu celular e ferramentas gratuitas ou de baixo custo. Seu investimento inicial é apenas no conhecimento.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROOF SECTION -->
+    <section class="proof">
+        <div class="container">
+            <h2>A Lógica por Trás do Sucesso:</h2>
+            <p>Milhões de pessoas estão conectadas à internet todos os dias, buscando produtos, serviços e informações. Com as estratégias certas, é possível alcançar essas pessoas e transformar a atenção delas em vendas. Este eBook te mostra o caminho para:</p>
+            <ul>
+                <li>Identificar oportunidades no mercado digital.</li>
+                <li>Criar ofertas irresistíveis.</li>
+                <li>Atrair clientes de forma orgânica e eficiente.</li>
+                <li>Converter vendas usando seu celular.</li>
+            </ul>
+            <p><strong>Não é mágica, é método. E este método está ao seu alcance.</strong></p>
+        </div>
+    </section>
+
+    <!-- OFFER SECTION (COM PREÇO) -->
+    <section class="offer">
+        <div class="container">
+            <h2>Sua Oportunidade de Transformação:</h2>
+            <p>Imagine ter acesso a todo esse conhecimento, que poderia custar centenas de reais em cursos e mentorias, por um valor que cabe no seu bolso.</p>
+            <div class="price-box">
+                <p class="price-highlight">Hoje, você pode garantir seu acesso imediato ao eBook "O Caminho para o Sucesso Online" por apenas:</p>
+                <p class="price">R$ 37,00</p>
+                <p class="low-risk">Um investimento baixo para um potencial de retorno ilimitado. Risco zero para você!</p>
+                <p class="urgency">Esta oferta especial é por tempo limitado. O preço pode mudar a qualquer momento. Não perca essa chance!</p>
+            </div>
+            <a href="https://pay.hotmart.com/X89951504X" class="cta-button cta-button-large">Quero começar a ganhar pelo celular</a>
+        </div>
+    </section>
+
+    <!-- GUARANTEE SECTION -->
+    <section class="guarantee">
+        <div class="container">
+            <h2>Sua Satisfação é 100% Garantida!</h2>
+            <p>Temos tanta certeza de que este eBook vai transformar seus resultados que oferecemos uma garantia incondicional:</p>
+            <p class="guarantee-text">Se em até 7 dias você não estiver satisfeito(a) com o conteúdo, ou sentir que não é para você, basta nos enviar um e-mail e devolveremos 100% do seu investimento. Sem perguntas, sem burocracia. <strong>Risco Zero para você!</strong></p>
+        </div>
+    </section>
+
+    <!-- FINAL CTA SECTION -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Não deixe para depois o sucesso que você pode começar hoje!</h2>
+            <a href="https://pay.hotmart.com/X89951504X" class="cta-button cta-button-large">Quero começar a ganhar pelo celular</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 O Caminho para o Sucesso Online. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
